@@ -22,7 +22,7 @@ namespace MvcCoreSaSAzureStorage.Models
             set
             {
                 this._Curso = value;
-                this.RowKey = value.ToString();
+                this.PartitionKey = value.ToString();
             }
         }
         public string Nombre { get; set; }
@@ -32,7 +32,7 @@ namespace MvcCoreSaSAzureStorage.Models
 
         public string PartitionKey { get; set; }
         public string RowKey { get; set; }
-        public DateTimeOffset? Timestamp { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public ETag ETag { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTimeOffset? Timestamp { get; set; }
+        public ETag ETag { get; set; }
     }
 }
